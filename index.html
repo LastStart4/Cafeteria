@@ -1,15 +1,18 @@
+```html
 <!DOCTYPE html>
-
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafetería UTP</title>
     <link rel="stylesheet" href="css/Style.css">
 </head>
+
 <body>
 
 <header class="header">
+
     <div class="logo">
         <h1>Cafetería UTP</h1>
         <span>Pedidos rápidos</span>
@@ -18,94 +21,303 @@
     <button class="cart-button" id="cartButton">
         🛒 Carrito <span id="cartCount">0</span>
     </button>
+
 </header>
+
 
 <main class="container">
 
+    <!-- =========================
+         MENÚ PRINCIPAL
+    ========================== -->
+
     <section class="welcome">
+
         <h2>¿Qué deseas pedir?</h2>
-        <p>Encuentra tus productos favoritos y realiza tu pedido.</p>
+
+        <p>
+            Encuentra tus productos favoritos y realiza tu pedido.
+        </p>
+
     </section>
 
+
     <nav class="categories">
-        <button class="category active" data-category="todos">Todos</button>
-        <button class="category" data-category="comidas">Comidas</button>
-        <button class="category" data-category="bebidas">Bebidas</button>
-        <button class="category" data-category="snacks">Snacks</button>
+
+        <button class="category active" data-category="todos">
+            Todos
+        </button>
+
+        <button class="category" data-category="comidas">
+            Comidas
+        </button>
+
+        <button class="category" data-category="bebidas">
+            Bebidas
+        </button>
+
+        <button class="category" data-category="snacks">
+            Snacks
+        </button>
+
     </nav>
+
 
     <section class="products" id="productsContainer">
         <!-- Los productos se generan desde JavaScript -->
     </section>
 
+
 </main>
 
-<!-- Modal del carrito -->
-<div class="modal hidden" id="cartModal">
 
-    <div class="modal-content">
+<!-- =========================
+     MODAL DETALLE DEL PRODUCTO
+========================== -->
+
+<div class="modal hidden" id="productModal">
+
+    <div class="modal-content product-detail">
 
         <div class="modal-header">
-            <h2>Mi pedido</h2>
-            <button id="closeCart">×</button>
-        </div>
 
-        <div id="cartItems" class="cart-items">
-            <!-- Productos del carrito -->
-        </div>
+            <h2>Detalle del producto</h2>
 
-        <div class="cart-footer">
-            <div class="total">
-                <span>Total</span>
-                <strong id="cartTotal">S/ 0.00</strong>
-            </div>
-
-            <button class="confirm-button" id="confirmOrder">
-                Confirmar pedido
+            <button id="closeProduct">
+                ×
             </button>
+
+        </div>
+
+
+        <div id="productDetailContent">
+
+            <!--
+                El contenido del producto
+                se genera desde JavaScript.
+            -->
+
         </div>
 
     </div>
 
 </div>
 
-<!-- Modal de confirmación -->
+
+<!-- =========================
+     MODAL DEL CARRITO
+========================== -->
+
+<div class="modal hidden" id="cartModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>Mi pedido</h2>
+
+            <button id="closeCart">
+                ×
+            </button>
+
+        </div>
+
+
+        <div id="cartItems" class="cart-items">
+
+            <!-- Productos del carrito -->
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="total">
+
+                <span>Total</span>
+
+                <strong id="cartTotal">
+                    S/ 0.00
+                </strong>
+
+            </div>
+
+
+            <button class="confirm-button" id="confirmOrder">
+
+                Confirmar pedido
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     MODAL DE CONFIRMACIÓN
+========================== -->
+
 <div class="modal hidden" id="orderModal">
 
     <div class="modal-content confirmation">
 
-        <div class="success-icon">✓</div>
-
-        <h2>¡Pedido registrado!</h2>
-
-        <p>Tu pedido <strong>#001</strong> fue registrado correctamente.</p>
-
-        <div class="order-status">
-            <div class="status-item completed">
-                <span>✓</span>
-                <p>Pedido recibido</p>
-            </div>
-
-            <div class="status-item current">
-                <span>●</span>
-                <p>En preparación</p>
-            </div>
-
-            <div class="status-item">
-                <span>○</span>
-                <p>Listo para recoger</p>
-            </div>
+        <div class="success-icon">
+            ✓
         </div>
 
-        <button class="confirm-button" id="closeOrder">
+
+        <h2>
+            ¡Pedido registrado!
+        </h2>
+
+
+        <p>
+            Tu pedido
+            <strong id="orderNumber">
+                #001
+            </strong>
+            fue registrado correctamente.
+        </p>
+
+
+        <div class="order-summary">
+
+            <h3>
+                Resumen del pedido
+            </h3>
+
+            <div id="orderSummaryItems">
+                <!-- Resumen generado desde JavaScript -->
+            </div>
+
+            <div class="summary-total">
+
+                <span>Total</span>
+
+                <strong id="orderSummaryTotal">
+                    S/ 0.00
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <button class="confirm-button" id="viewStatus">
+
+            Ver estado del pedido
+
+        </button>
+
+
+        <button class="secondary-button" id="closeOrder">
+
             Volver al menú
+
         </button>
 
     </div>
 
 </div>
 
+
+<!-- =========================
+     MODAL ESTADO DEL PEDIDO
+========================== -->
+
+<div class="modal hidden" id="statusModal">
+
+    <div class="modal-content confirmation">
+
+        <div class="modal-header">
+
+            <h2>
+                Estado del pedido
+            </h2>
+
+            <button id="closeStatus">
+                ×
+            </button>
+
+        </div>
+
+
+        <p class="status-order-number">
+
+            Pedido
+            <strong id="statusOrderNumber">
+                #001
+            </strong>
+
+        </p>
+
+
+        <div class="order-status">
+
+            <div class="status-item completed">
+
+                <span>✓</span>
+
+                <div>
+                    <strong>Pedido recibido</strong>
+
+                    <p>
+                        Tu pedido fue registrado correctamente.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="status-item current">
+
+                <span>●</span>
+
+                <div>
+                    <strong>En preparación</strong>
+
+                    <p>
+                        La cafetería está preparando tu pedido.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>○</span>
+
+                <div>
+                    <strong>Listo para recoger</strong>
+
+                    <p>
+                        Te avisaremos cuando esté listo.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button class="secondary-button" id="backToMenu">
+
+            Volver al menú
+
+        </button>
+
+    </div>
+
+</div>
+
+
 <script src="js/app.js"></script>
 
 </body>
+
 </html>
+```

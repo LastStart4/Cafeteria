@@ -65,7 +65,6 @@ const confirmOrder = document.getElementById("confirmOrder");
 const orderModal = document.getElementById("orderModal");
 const closeOrder = document.getElementById("closeOrder");
 
-// Mostrar productos
 
 function showProducts(category = "todos") {
 
@@ -113,7 +112,6 @@ filteredProducts.forEach(product => {
 
 }
 
-// Agregar producto
 
 function addToCart(productId) {
 
@@ -137,7 +135,6 @@ updateCart();
 
 }
 
-// Actualizar carrito
 
 function updateCart() {
 
@@ -154,7 +151,7 @@ renderCart();
 
 }
 
-// Mostrar carrito
+
 
 function renderCart() {
 
@@ -217,7 +214,6 @@ cartTotal.textContent = `S/ ${total.toFixed(2)}`;
 
 }
 
-// Cambiar cantidad
 
 function changeQuantity(productId, change) {
 
@@ -238,7 +234,6 @@ updateCart();
 
 }
 
-// Filtros
 
 document.querySelectorAll(".category").forEach(button => {
 
@@ -257,25 +252,22 @@ button.addEventListener("click", () => {
 
 });
 
-// Abrir carrito
+
 
 cartButton.addEventListener("click", () => {
 
-tModal.classList.remove("hidden");
+    cartModal.classList.remove("hidden");
 
-renderCart();
-
+    renderCart();
 
 });
 
-// Cerrar carrito
 
 closeCart.addEventListener("click", () => {
 
 cartModal.classList.add("hidden");
 });
 
-// Confirmar pedido
 
 confirmOrder.addEventListener("click", () => {
 
@@ -296,7 +288,6 @@ updateCart();
 
 });
 
-// Volver al menú
 
 closeOrder.addEventListener("click", () => {
 
@@ -304,6 +295,5 @@ orderModal.classList.add("hidden");
 
 });
 
-// Cargar productos inicialmente
 
 showProducts();
