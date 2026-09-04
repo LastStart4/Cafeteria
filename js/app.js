@@ -62,10 +62,6 @@ let currentOrderNumber = 1;
 let detailQuantity = 1;
 
 
-/* =========================
-   ELEMENTOS DEL DOM
-========================= */
-
 const productsContainer =
     document.getElementById("productsContainer");
 
@@ -76,10 +72,6 @@ const cartCount =
     document.getElementById("cartCount");
 
 
-/* =========================
-   MODAL PRODUCTO
-========================= */
-
 const productModal =
     document.getElementById("productModal");
 
@@ -88,11 +80,6 @@ const closeProduct =
 
 const productDetailContent =
     document.getElementById("productDetailContent");
-
-
-/* =========================
-   MODAL CARRITO
-========================= */
 
 const cartModal =
     document.getElementById("cartModal");
@@ -109,10 +96,6 @@ const cartTotal =
 const confirmOrder =
     document.getElementById("confirmOrder");
 
-
-/* =========================
-   MODAL CONFIRMACIÓN
-========================= */
 
 const orderModal =
     document.getElementById("orderModal");
@@ -133,10 +116,6 @@ const closeOrder =
     document.getElementById("closeOrder");
 
 
-/* =========================
-   MODAL ESTADO
-========================= */
-
 const statusModal =
     document.getElementById("statusModal");
 
@@ -149,10 +128,6 @@ const closeStatus =
 const backToMenu =
     document.getElementById("backToMenu");
 
-
-/* =========================
-   MOSTRAR PRODUCTOS
-========================= */
 
 function showProducts(category = "todos") {
 
@@ -245,10 +220,6 @@ function showProducts(category = "todos") {
 
 }
 
-
-/* =========================
-   DETALLE DEL PRODUCTO
-========================= */
 
 function openProductDetail(productId) {
 
@@ -350,10 +321,6 @@ function openProductDetail(productId) {
 }
 
 
-/* =========================
-   CAMBIAR CANTIDAD DEL DETALLE
-========================= */
-
 function changeDetailQuantity(change) {
 
     detailQuantity += change;
@@ -377,10 +344,6 @@ function changeDetailQuantity(change) {
 
 }
 
-
-/* =========================
-   AGREGAR DESDE DETALLE
-========================= */
 
 function addProductFromDetail() {
 
@@ -422,10 +385,6 @@ function addProductFromDetail() {
 }
 
 
-/* =========================
-   ACTUALIZAR CARRITO
-========================= */
-
 function updateCart() {
 
     const totalQuantity =
@@ -444,10 +403,6 @@ function updateCart() {
 
 }
 
-
-/* =========================
-   MOSTRAR CARRITO
-========================= */
 
 function renderCart() {
 
@@ -547,10 +502,6 @@ function renderCart() {
 }
 
 
-/* =========================
-   CAMBIAR CANTIDAD DEL CARRITO
-========================= */
-
 function changeQuantity(productId, change) {
 
     const product =
@@ -582,10 +533,6 @@ function changeQuantity(productId, change) {
 }
 
 
-/* =========================
-   FILTROS DE CATEGORÍAS
-========================= */
-
 document
     .querySelectorAll(".category")
     .forEach(button => {
@@ -614,10 +561,6 @@ document
     });
 
 
-/* =========================
-   ABRIR CARRITO
-========================= */
-
 cartButton.addEventListener(
     "click",
     () => {
@@ -633,10 +576,6 @@ cartButton.addEventListener(
 );
 
 
-/* =========================
-   CERRAR CARRITO
-========================= */
-
 closeCart.addEventListener(
     "click",
     () => {
@@ -648,10 +587,6 @@ closeCart.addEventListener(
     }
 );
 
-
-/* =========================
-   CERRAR DETALLE
-========================= */
 
 closeProduct.addEventListener(
     "click",
@@ -668,10 +603,6 @@ closeProduct.addEventListener(
     }
 );
 
-
-/* =========================
-   CONFIRMAR PEDIDO
-========================= */
 
 confirmOrder.addEventListener(
     "click",
@@ -719,10 +650,6 @@ confirmOrder.addEventListener(
     }
 );
 
-
-/* =========================
-   RESUMEN DEL PEDIDO
-========================= */
 
 function createOrderSummary() {
 
@@ -779,10 +706,6 @@ function createOrderSummary() {
 }
 
 
-/* =========================
-   VER ESTADO
-========================= */
-
 viewStatus.addEventListener(
     "click",
     () => {
@@ -799,10 +722,6 @@ viewStatus.addEventListener(
     }
 );
 
-
-/* =========================
-   CERRAR CONFIRMACIÓN
-========================= */
 
 closeOrder.addEventListener(
     "click",
@@ -821,10 +740,6 @@ closeOrder.addEventListener(
 );
 
 
-/* =========================
-   CERRAR ESTADO
-========================= */
-
 closeStatus.addEventListener(
     "click",
     () => {
@@ -836,10 +751,6 @@ closeStatus.addEventListener(
     }
 );
 
-
-/* =========================
-   VOLVER AL MENÚ
-========================= */
 
 backToMenu.addEventListener(
     "click",
@@ -857,9 +768,5 @@ backToMenu.addEventListener(
     }
 );
 
-
-/* =========================
-   CARGAR PRODUCTOS
-========================= */
 
 showProducts();
