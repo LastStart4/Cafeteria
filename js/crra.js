@@ -1,11 +1,11 @@
 const products = [
     { id: 1, name: "Café Americano", shortName: "Café", description: "Espresso doble con agua caliente. Cuerpo limpio, aroma tostado y persistente.", price: 5, category: "Bebidas", emoji: "☕", stock: 18, image: "img/cafe.jpg" },
-    { id: 2, name: "Café Latte", shortName: "Latte", description: "Espresso con leche vaporizada y una fina capa de espuma cremosa.", price: 6.5, category: "Bebidas", emoji: "🥛", stock: 3, image: "img/cafe.jpg" },
-    { id: 3, name: "Té de Menta", shortName: "Té", description: "Infusión de hierbabuena fresca, servida caliente. Refrescante y reconfortante.", price: 4, category: "Bebidas", emoji: "🍵", stock: 0, image: "img/jugo.jpg" },
+    { id: 2, name: "Café Latte", shortName: "Latte", description: "Espresso con leche vaporizada y una fina capa de espuma cremosa.", price: 6.5, category: "Bebidas", emoji: "🥛", stock: 3, image: "img/cafe latte.jpg" },
+    { id: 3, name: "Té de Menta", shortName: "Té", description: "Infusión de hierbabuena fresca, servida caliente. Refrescante y reconfortante.", price: 4, category: "Bebidas", emoji: "🍵", stock: 0, image: "img/te menta.jpg" },
     { id: 4, name: "Sándwich de Jamón", shortName: "Sándwich", description: "Pan artesanal tostado con jamón ahumado, queso gouda fundido y lechuga fresca.", price: 8, category: "Snacks", emoji: "🥪", stock: 9, image: "img/sandwich.jpg" },
     { id: 5, name: "Empanada de Carne", shortName: "Empanada", description: "Masa horneada rellena de carne molida sazonada, aceituna botija y huevo duro.", price: 3.5, category: "Snacks", emoji: "🥟", stock: 2, image: "img/empanada.jpg" },
-    { id: 6, name: "Brownie de Chocolate", shortName: "Brownie", description: "Brownie de chocolate negro 70% cacao con nueces. Húmedo por dentro, crujiente por fuera.", price: 5.5, category: "Postres", emoji: "🍫", stock: 14, image: "img/galletas.jpg" },
-    { id: 7, name: "Torta de Limón", shortName: "Torta", description: "Bizcocho esponjoso bañado en crema de limón y glaseado de azúcar impalpable.", price: 7, category: "Postres", emoji: "🍰", stock: 0, image: "img/galletas.jpg" }
+    { id: 6, name: "Brownie de Chocolate", shortName: "Brownie", description: "Brownie de chocolate negro 70% cacao con nueces. Húmedo por dentro, crujiente por fuera.", price: 5.5, category: "Postres", emoji: "🍫", stock: 14, image: "img/brownie.jpg" },
+    { id: 7, name: "Torta de Limón", shortName: "Torta", description: "Bizcocho esponjoso bañado en crema de limón y glaseado de azúcar impalpable.", price: 7, category: "Postres", emoji: "🍰", stock: 0, image: "img/torta de limon.jpeg" }
 ];
 
 const universityUser = {
