@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f8f6f1">
+    <title>Biblioteca visual · Cafetería</title>
+    <link rel="stylesheet" href="css/crra.css">
+    <link rel="stylesheet" href="css/design-system.css">
+</head>
+<body>
+    <div class="ds-layout">
+        <aside class="ds-sidebar">
+            <a class="ds-brand" href="#inicio" aria-label="Biblioteca visual de Cafetería">
+                <span class="ds-brand-mark">C</span>
+                <span><strong>Cafetería</strong><small>Biblioteca visual</small></span>
+            </a>
+            <p class="ds-nav-label">Componentes</p>
+            <nav class="ds-nav" aria-label="Secciones de la biblioteca">
+                <a href="#colores">Colores</a>
+                <a href="#tipografia">Tipografía</a>
+                <a href="#botones">Botones</a>
+                <a href="#estados">Estados</a>
+                <a href="#campos">Campos</a>
+                <a href="#superficies">Superficies</a>
+            </nav>
+            <p class="ds-sidebar-note">Vista de referencia<br>Solo visualización</p>
+        </aside>
+
+        <main class="ds-main" id="inicio">
+            <header class="ds-page-header">
+                <div>
+                    <p class="eyebrow">Sistema de diseño · v1.0</p>
+                    <h1>Biblioteca visual</h1>
+                    <p class="ds-intro">Tokens y componentes que dan forma a la experiencia de la cafetería universitaria.</p>
+                </div>
+                <span class="ds-version">UI KIT</span>
+            </header>
+
+            <section class="ds-section" id="colores">
+                <div class="ds-section-heading">
+                    <div><p class="eyebrow">01 · Fundamentos</p><h2>Paleta de colores</h2></div>
+                    <p>Colores de interfaz definidos en los estilos de la aplicación.</p>
+                </div>
+                <div class="ds-color-grid">
+                    <article class="ds-color-card"><span class="ds-swatch" style="--swatch: #1b5e40"></span><strong>Verde cafetería</strong><code>#1B5E40</code><small>Acción principal</small></article>
+                    <article class="ds-color-card"><span class="ds-swatch" style="--swatch: #d97706"></span><strong>Ámbar</strong><code>#D97706</code><small>Acento y atención</small></article>
+                    <article class="ds-color-card"><span class="ds-swatch" style="--swatch: #f8f6f1"></span><strong>Marfil</strong><code>#F8F6F1</code><small>Fondo de aplicación</small></article>
+                    <article class="ds-color-card"><span class="ds-swatch" style="--swatch: #ffffff"></span><strong>Blanco</strong><code>#FFFFFF</code><small>Superficies</small></article>
+                    <article class="ds-color-card"><span class="ds-swatch" style="--swatch: #1a1817"></span><strong>Tinta</strong><code>#1A1817</code><small>Texto principal</small></article>
+                    <article class="ds-color-card"><span class="ds-swatch" style="--swatch: #e5dfd4"></span><strong>Borde cálido</strong><code>#E5DFD4</code><small>Bordes y divisores</small></article>
+                </div>
+            </section>
+
+            <section class="ds-section" id="tipografia">
+                <div class="ds-section-heading">
+                    <div><p class="eyebrow">02 · Fundamentos</p><h2>Tipografía</h2></div>
+                    <p>Contraste entre títulos expresivos y texto de interfaz legible.</p>
+                </div>
+                <div class="ds-type-specimens">
+                    <article class="ds-type-card">
+                        <span class="ds-type-meta">Display · DM Serif Display</span>
+                        <h3 class="ds-display-sample">Un buen café<br>hace la pausa.</h3>
+                        <code>34 px / Regular</code>
+                    </article>
+                    <article class="ds-type-card">
+                        <span class="ds-type-meta">Interfaz · Nunito</span>
+                        <h3 class="ds-heading-sample">Tu pedido, a tu ritmo</h3>
+                        <p>Elige algo rico y recógelo en la cafetería del campus.</p>
+                        <span class="ds-type-meta">16 px / 400 · Texto de cuerpo</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="ds-section" id="botones">
+                <div class="ds-section-heading">
+                    <div><p class="eyebrow">03 · Componentes</p><h2>Botones</h2></div>
+                    <p>Jerarquía de acciones y tratamiento de estado deshabilitado.</p>
+                </div>
+                <div class="ds-component-grid">
+                    <article class="ds-component-card">
+                        <span class="ds-type-meta">Acción principal</span>
+                        <button class="action-button action-primary ds-demo-button" type="button">Agregar al pedido</button>
+                    </article>
+                    <article class="ds-component-card">
+                        <span class="ds-type-meta">Acción secundaria</span>
+                        <button class="action-button action-secondary ds-demo-button" type="button">Ver menú</button>
+                    </article>
+                    <article class="ds-component-card">
+                        <span class="ds-type-meta">Deshabilitado</span>
+                        <button class="action-button action-primary ds-demo-button" type="button" disabled>No disponible</button>
+                    </article>
+                </div>
+            </section>
+
+            <section class="ds-section" id="estados">
+                <div class="ds-section-heading">
+                    <div><p class="eyebrow">04 · Componentes</p><h2>Estados y mensajes</h2></div>
+                    <p>Indicadores breves para comunicar disponibilidad y resultado.</p>
+                </div>
+                <div class="ds-state-grid">
+                    <article class="ds-component-card">
+                        <span class="ds-type-meta">Disponibilidad</span>
+                        <div class="ds-badge-row">
+                            <span class="stock-badge stock-available">Disponible</span>
+                            <span class="stock-badge stock-low">Stock bajo</span>
+                            <span class="stock-badge stock-out">Agotado</span>
+                        </div>
+                    </article>
+                    <article class="ds-component-card">
+                        <span class="ds-type-meta">Estado del pedido</span>
+                        <div class="ds-badge-row">
+                            <span class="status-badge status-preparing">En preparación</span>
+                            <span class="status-badge status-done">Entregado</span>
+                            <span class="status-badge status-cancelled">Cancelado</span>
+                        </div>
+                    </article>
+                    <article class="ds-alert ds-alert-success"><strong>Pedido confirmado</strong><span>Te avisaremos cuando esté listo para retirar.</span></article>
+                    <article class="ds-alert ds-alert-warning"><strong>Stock limitado</strong><span>Quedan pocas unidades de este producto.</span></article>
+                </div>
+            </section>
+
+            <section class="ds-section" id="campos">
+                <div class="ds-section-heading">
+                    <div><p class="eyebrow">05 · Componentes</p><h2>Campos y filtros</h2></div>
+                    <p>Elementos de entrada presentados como referencia estática.</p>
+                </div>
+                <div class="ds-component-grid">
+                    <article class="ds-component-card">
+                        <label class="ds-field-label" for="ds-search">Buscar en el menú</label>
+                        <div class="ds-search-field"><span aria-hidden="true">⌕</span><input id="ds-search" type="text" value="Café" readonly></div>
+                    </article>
+                    <article class="ds-component-card">
+                        <span class="ds-field-label">Categorías</span>
+                        <div class="ds-badge-row"><span class="category-chip active">Todos</span><span class="category-chip">Bebidas</span><span class="category-chip">Postres</span></div>
+                    </article>
+                    <article class="ds-component-card">
+                        <span class="ds-field-label">Selector de cantidad</span>
+                        <div class="quantity-picker ds-quantity">
+                            <button type="button" disabled aria-label="Disminuir cantidad">−</button>
+                            <span>2</span>
+                            <button type="button" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="ds-section" id="superficies">
+                <div class="ds-section-heading">
+                    <div><p class="eyebrow">06 · Componentes</p><h2>Superficies y tarjetas</h2></div>
+                    <p>Contenedores con bordes suaves, fondos claros y elevación sutil.</p>
+                </div>
+                <div class="ds-surface-grid">
+                    <article class="ds-surface-card ds-product-card">
+                        <img src="img/cafe.jpg" alt="Taza de café americano">
+                        <div class="ds-product-body">
+                            <span class="eyebrow">Bebidas</span>
+                            <h3>Café Americano</h3>
+                            <p>Espresso doble con agua caliente.</p>
+                            <div class="ds-product-footer"><strong>S/ 5.00</strong><span class="stock-badge stock-available">Disponible</span></div>
+                        </div>
+                    </article>
+                    <article class="ds-surface-card ds-summary-card">
+                        <span class="eyebrow">Resumen del pedido</span>
+                        <div><span>2 productos</span><strong>S/ 13.00</strong></div>
+                        <button class="action-button action-primary ds-demo-button" type="button">Confirmar pedido</button>
+                    </article>
+                    <article class="ds-surface-card ds-profile-card">
+                        <span class="ds-avatar">JP</span>
+                        <div><h3>Juan Pérez</h3><p>Cuenta universitaria verificada</p></div>
+                    </article>
+                </div>
+            </section>
+
+            <footer class="ds-footer">Biblioteca visual de Cafetería <span>Elementos de muestra · No interactivos</span></footer>
+        </main>
+    </div>
+</body>
+</html>
